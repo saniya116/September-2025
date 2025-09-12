@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    int year;
+    printf("Enter a year: ");
+    scanf("%d", &year);
+    // Check for leap year
+    if (year % 400 == 0) {
+        // Divisible by 400 → leap year
+        printf("%d is a leap year.\n", year);
+    }
+    else if (year % 100 == 0) {
+        // Divisible by 100 but not by 400 → not a leap year
+        printf("%d is not a leap year.\n", year);
+    }
+    else if (year % 4 == 0) {
+        // Divisible by 4 but not by 100 → leap year
+        printf("%d is a leap year.\n", year);
+    }
+    else {
+        // Everything else → not a leap year
+        printf("%d is not a leap year.\n", year);
+    }
+    return 0;
+}
