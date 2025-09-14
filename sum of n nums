@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int N, sum = 0;
+    // Ask user for input
+    printf("Enter a positive integer N: ");
+    scanf("%d", &N);
+    // Validate input
+    if (N <= 0) {
+        printf("Please enter a positive integer greater than 0.\n");
+        return 1; // Exit with error
+    }
+    // Loop to calculate sum
+    for (int i = 1; i <= N; i++) {
+        sum += i;
+    }
+   // Display the result
+    printf("The sum of the first %d natural numbers is: %d\n", N, sum);
+    return 0;
+}
