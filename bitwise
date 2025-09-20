@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    unsigned int a = 60;    
+    unsigned int b = 13;    
+    unsigned int result;
+    result = a & b;         
+    printf("a & b = %u\n", result);
+    result = a | b;         
+    printf("a | b = %u\n", result);
+    result= a ^ b;
+    printf("a ^ b = %u\n", result);
+    result = ~a;            
+    printf("~a = %u\n", result);
+    result = a << 2;        
+    printf("a << 2 = %u\n", result);// 60 >> 2 = 15 = 0000 1111
+    printf("a >> 2 = %u\n", result);
+    return 0;
+}
