@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main() {
+    float floatValue = 9.87;
+    int intValue = (int) floatValue;
+    printf("Original float value: %.2f\n", floatValue);
+    printf("After explicit casting to int: %d\n", intValue);
+    return 0;
+}
