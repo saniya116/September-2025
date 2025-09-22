@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int integerVar = 10;
+    float floatVar = 5.5;
+    float result = integerVar + floatVar;
+    printf("Integer: %d\n", integerVar);
+    printf("Float: %.2f\n", floatVar);
+    printf("Result (int + float): %.2f\n", result);
+    return 0;
+}
