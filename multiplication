@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int number, rows;
+    printf("Enter the number: ");
+    scanf("%d", &number);
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+    for (int i = 1; i <= rows; i++) {
+        printf("%d*%d=%d", number, i, number * i);
+        if (i < rows) {
+            printf(",");
+        }
+    }
+    printf("\n"); 
+    return 0;
+}
