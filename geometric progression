@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    double x;
+    int n;
+    double sum;
+    printf("Enter the base x: ");
+    scanf("%lf", &x);
+    printf("Enter the number of terms n: ");
+    scanf("%d", &n);
+    if (n <= 0) {
+        printf("Number of terms must be a positive integer.\n");
+        return 1;
+    }
+    if (x == 1) {
+        sum = n;
+    } else {
+        sum = x * (pow(x, n) - 1) / (x - 1);
+    }
+    printf("Sum of the geometric progression: %.2lf\n", sum);
+    return 0;
+}
