@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <math.h>
+void sortArray(float arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap
+                float temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+int main() {
+    int n;
+    float arr[100];  
+    printf("Enter the number of elements (n): ");
+    scanf("%d", &n);
+    if (n <= 0 || n > 100) {
+        printf("Invalid input. n must be between 1 and 100.\n");
+        return 1;
+    }
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        printf("Element %d: ", i + 1);
+        scanf("%f", &arr[i]);
+    }
+    float sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += arr[i];
+    }
+    float mean = sum / n;
+    float variance = 0;
+    for (int i = 0; i < n; i++) {
+        variance += pow(arr[i] - mean, 2);
+    }
+    variance /= n;
+    float std_deviation = sqrt(variance);
+    sortArray(arr, n);
+    printf("\nResults:\n");
+    printf("Mean = %.2f\n", mean);
+    printf("Variance = %.2f\n", variance);
+    printf("Standard Deviation = %.2f\n", std_deviation);
+    printf("\nSorted Array (Ascending Order):\n");
+    for (int i = 0; i < n; i++) {
+        printf("%.2f ", arr[i]);
+    }
+    printf("\n");
+    return 0;
+}
