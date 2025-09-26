@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    int arr[] = {12, 45, 7, 89, 34, 23, 67}; 
+    int n = sizeof(arr) / sizeof(arr[0]);  
+    int min = arr[0];
+    int max = arr[0];
+    int sum = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < min)
+            min = arr[i];
+        if (arr[i] > max)
+            max = arr[i];
+        sum += arr[i];
+    }
+    float average = (float)sum / n;
+    printf("Minimum value: %d\n", min);
+    printf("Maximum value: %d\n", max);
+    printf("Average value: %.2f\n", average);
+    return 0;
+}
